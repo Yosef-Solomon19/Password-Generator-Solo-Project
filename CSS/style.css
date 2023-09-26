@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:wght@800&display=swap');
+
+/* 
+    #10B981
+    #273549
+    #6B7280
+    white text for green button 
+
+
+ */
+body {
+    margin: 0; 
+    background-color: #ECFDF5;
+}
+
+/* Utility class */
+.text-drk-green {
+    color: #10B981;
+
+}
+.text-light-green {
+    color: #5DEF92;
+}
+
+.btn-password-style {
+
+}
+
+
+/* Font */
+h1{
+    font-family: 'Karla', sans-serif;
+    font-weight: bolder; 
+}
+
+h4 {
+    font-weight: 100;
+}
+
+
+/* Styling */
+div h1 {
+    margin: 0;
+}
+
+div h4 {
+    margin: 5px 0 0 0;
+    color: rgb(224, 207, 207);
+}
+
+.text-password-style {
+    
+}
+
+
+
+
+
+
+
+/* Question */
+/* For example if color A is green and color B is a different 
+    shade of green how would you provide a class name for them ?
+     */
