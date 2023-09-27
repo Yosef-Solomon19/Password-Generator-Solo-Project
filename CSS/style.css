@@ -47,7 +47,6 @@ main {
     margin: 115px 52px;
 }
 
-
 div h1 {
     margin: 0;
 }
@@ -71,6 +70,17 @@ div h4 {
     margin-right: 30px;
 }
 
+
+button {
+    cursor: pointer;
+}
+
+/* .btn {
+    cursor: pointer;
+} */
+
+
+
 .text-password-style {
     border: none;
     background-color: #273549;
@@ -90,6 +100,13 @@ div h4 {
     border-radius: 6px;
 }
 
+.btn-generate-style:hover {
+    background-color: #1cda9b;
+    color: #f8f8f8;
+    text-shadow: 0 0 2px black;
+}
+
+
 .border-bottom-line {
     border-bottom: 2px solid #2F3E53;
     margin-bottom: 30px;
@@ -100,6 +117,10 @@ div h4 {
     border: none;
     padding: 10px 50px;
     border-radius: 6px;
+}
+
+.pw-result-style:hover {
+    background-color: #304158;
 }
 
 
