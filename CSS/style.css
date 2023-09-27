@@ -1,5 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:wght@800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter&family=Karla:wght@800&display=swap');
 
 /* 
     #1F2937 - background color for the body
@@ -16,7 +16,6 @@ body {
     color: #FAF9F6;
 }
 
-
 /* Utility class */
 .text-drk-green {
     color: #10B981;
@@ -25,11 +24,6 @@ body {
 .text-light-green {
     color: #4ADF86;
 }
-
-/* .btn-password-style {
-
-} */
-
 
 /* Font */
 body, .password-section button {
@@ -42,29 +36,30 @@ h1{
 }
 
 h4 {
+    font-family: 'Inter', sans-serif;
     font-weight: 100;
+    color: #D5D4D8;
 }
-
 
 /* Styling */
-div h1 {
-    margin: 0;
-}
-
-div h4 {
-    margin: 0;
-    color: rgb(224, 207, 207);
-}
-
 main {
     /* border: 1px solid red;  */
     margin: 115px 52px;
 }
 
-div h4 {
-    margin-top: 5px;
+
+div h1 {
+    margin: 0;
 }
 
+div h4 {
+    margin-top: 5px;
+    /* color: rgb(224, 207, 207); */
+}
+
+.text-section {
+    margin-bottom: 50px;
+}
 
 .generated-passwords {
     display: flex;
@@ -92,14 +87,20 @@ div h4 {
     border: none;
     background-color: #10B981;
     padding: 9px 17px 9px 15px;
-    border-radius: 7px;
+    border-radius: 6px;
 }
 
 .border-bottom-line {
-    border-bottom: 2px solid red;
-    margin-bottom: 35.5px;
+    border-bottom: 2px solid #2F3E53;
+    margin-bottom: 30px;
 }
 
+.pw-result-style {
+    background-color: #273549;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 6px;
+}
 
 
 
