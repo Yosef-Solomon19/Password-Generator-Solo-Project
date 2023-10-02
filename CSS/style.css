@@ -124,6 +124,29 @@ button {
 }
 
 
+/* Password slider */
+/* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
+    Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
+.range-slider-container {
+    display: inline;
+    accent-color: #10B981;
+}
+
+.range {
+
+}
+
+.bubble {
+
+}
+
+.bubble::after {
+
+}
+
+
+
+
 
 
 /* Question */
@@ -131,3 +154,10 @@ button {
     shade of green what would be the appropriate utility class name for them ?
     i.e green & light-green ? 
      */
+/* 10/02/2023 */
+/* How can I center an input slider affected by display flex from the parent element
+What I've tried: 
+    Vertical align
+    text align 
+
+ */

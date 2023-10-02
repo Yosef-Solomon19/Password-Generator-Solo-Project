@@ -16,9 +16,16 @@
 
         <div class="password-section">
             <button onclick="generatePw()" class="btn-generate-style btn">Generate passwords</button>
+            <div class="range-slider-container">
+                <input type="range" class="range" id="pw-length-input"
+                        min="5" max="15" >
+                <output class="bubble"></output>
+
+            </div>
+            
             <div class="border-bottom-line"></div>
             <div class="generated-passwords">
-                <button id="pw-a" class="pw-result-style text-drk-green ">>nfJjy!dDvR&ial</button>
+                <button id="pw-a" class="pw-result-style text-drk-green ">nfJjy!dDvR&ial</button>
                 <button id="pw-b" class="pw-result-style text-drk-green ">egxWij@veiPUwKe</button>
             </div>
         </div>

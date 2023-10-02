@@ -27,6 +27,15 @@ function getRandomPw(pw) {
 }
 
 
+// /* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
+// Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
+
+
+
+
 // 27/09/2023
 // Line 15-16 is there a way to make those more DRY ? Is there a way to write this in one line ? 
 // Same thing for Line 17 - 18. 
+
+// 10/02/2023
+// Task - After working on the range slider CSS, need to take the value of the slider and use that as the value for password length
