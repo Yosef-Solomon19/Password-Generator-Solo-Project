@@ -140,60 +140,6 @@ button {
 
 }
 
-/* .bubble {
-    background: #273549;
-    color: white;
-    padding: 4px 12px;
-    position: absolute;
-    position: absolute;
-    border-radius: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-
-     background: black;
-  color: white;
-  padding: 4px 12px;
-  position: absolute;
-  border-radius: 4px;
-  left: 50%;
-  transform: translateX(-50%); 
-
-} */
-
-/* .bubble::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: black;
-    top: -1px;
-    left: 50%;
-
-    content: "";
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: black;
-  top: -1px;
-  left: 50%; 
-
-} */
-  
-  /* body {
-    margin: 2rem;
-  } */
-  
-  /* input[type="range"] {
-    accent-color: coral;
-  } */
-  
-
-
-
-
-
-
-
 /* Question */
 /* For example if color A is green and color B is a different 
     shade of green what would be the appropriate utility class name for them ?
