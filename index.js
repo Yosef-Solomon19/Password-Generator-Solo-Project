@@ -12,17 +12,19 @@ console.log(passwordAEl)
 
 
 function generatePw() {
+    console.log(rangeVal)   
     passwordAEl.textContent=""
     passwordBEl.textContent=""
-    getRandomPw(passwordAEl);
-    getRandomPw(passwordBEl);    
+
+    getRandomPw(rangeVal, passwordAEl);
+    getRandomPw(rangeVal, passwordBEl);  
     
 }
 
-function getRandomPw(pw) {
-    for(let i=0; i < 15; i++) {
+function getRandomPw(pwLength, pwText) {
+    for(let i=0; i < pwLength; i++) {
         let randomNumber = Math.floor(Math.random() * 91);
-       pw.textContent += characters[randomNumber];
+        pwText.textContent += characters[randomNumber];
     }
 }
 
@@ -30,7 +32,42 @@ function getRandomPw(pw) {
 // /* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
 // Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
+const range = document.querySelector(".range")
+const inputText = document.querySelector(".range-text")
+let rangeVal;
 
+// function getFinalval(val) {
+//     // const rangeVal = Number(val)
+//     // generatePw(rangeVal)
+    
+
+// }
+
+range.addEventListener("input", () => {
+    updateInputText()
+    rangeVal = range.value;
+    });
+
+// function getRangeNum() {
+//     // let convertToNum = parseInt(val);
+
+//     range.addEventListener("input", () => {
+//         updateInputText()
+//     });
+
+//   }
+
+  function updateInputText() {
+    // console.log(val)
+    const val = range.value;
+    inputText.value = val;
+    console.log(val)
+
+    // console.log(range)
+
+    // console.log(inputText)
+  }
+  
 
 
 // 27/09/2023
@@ -38,4 +75,6 @@ function getRandomPw(pw) {
 // Same thing for Line 17 - 18. 
 
 // 10/02/2023
-// Task - After working on the range slider CSS, need to take the value of the slider and use that as the value for password length
+// Task - After working on the range slider CSS, need to:
+//  A) Have the value always show as the slider is moving - done
+//  B) Use the value of where the slider stops to use that as the value for the password length - done 
