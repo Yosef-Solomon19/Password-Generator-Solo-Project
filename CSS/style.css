@@ -145,9 +145,11 @@ button {
      */
 /* 10/02/2023 */
 
-/* Current Issue: How can I center an input slider/input text affected by display flex from the parent element
+/* Current Issue: 1 - How can I center an input slider/input text affected by display flex from the parent element
    What I've tried:
         Vertical align
         text align 
+                  2 - The generated password text seem to fight eachother for space. One looks cramped while the other 
+                        is stretched out 
 
  */
