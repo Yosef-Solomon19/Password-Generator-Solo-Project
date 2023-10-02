@@ -45,7 +45,6 @@ let rangeVal;
 
 range.addEventListener("input", () => {
     updateInputText()
-    rangeVal = range.value;
     });
 
 // function getRangeNum() {
@@ -59,9 +58,11 @@ range.addEventListener("input", () => {
 
   function updateInputText() {
     // console.log(val)
-    const val = range.value;
-    inputText.value = val;
-    console.log(val)
+    rangeVal = range.value;
+    
+    // const val = range.value;
+    inputText.value = rangeVal = range.value;
+    console.log(rangeVal)
 
     // console.log(range)
 
