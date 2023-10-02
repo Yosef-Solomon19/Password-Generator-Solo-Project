@@ -130,14 +130,12 @@ button {
 
 .range-container {
     display: inline; 
-    accent-color: #10B981;
-
+    accent-color: #10B981; 
 }
 
 .range-text {
     width: 20px;
     text-align: center;
-
 }
 
 /* Question */
@@ -146,9 +144,10 @@ button {
     i.e green & light-green ? 
      */
 /* 10/02/2023 */
-/* How can I center an input slider affected by display flex from the parent element
-What I've tried: 
-    Vertical align
-    text align 
+
+/* Current Issue: How can I center an input slider/input text affected by display flex from the parent element
+   What I've tried:
+        Vertical align
+        text align 
 
  */
