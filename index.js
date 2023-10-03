@@ -71,6 +71,34 @@ range.addEventListener("input", () => {
   
 
 
+// *** Copy on click ***/
+function copyPwText() {
+  passwordAEl.addEventListener('click', () =>{
+    navigator.clipboard.writeText(passwordAEl.textContent)
+    console.log(passwordAEl.textContent)
+  })
+
+  passwordBEl.addEventListener('click', () =>{
+    navigator.clipboard.writeText(passwordBEl.textContent)
+    console.log(passwordBEl.textContent)
+  })
+  
+
+
+  // passwordBEl.addEventListener("copy", () => {
+  //   navigator.clipboard.writeText()
+  // })
+
+  // console.log(passwordBEl.value)
+  // navigator.clipboard.writeText(passwordBEl.value) 
+  // alert("Copied the text: " + copyText.value); 
+
+}
+
+
+
+
+
 // 27/09/2023
 // Line 15-16 is there a way to make those more DRY ? Is there a way to write this in one line ? 
 // Same thing for Line 17 - 18. 
@@ -79,3 +107,14 @@ range.addEventListener("input", () => {
 // Task - After working on the range slider CSS, need to:
 //  A) Have the value always show as the slider is moving - done
 //  B) Use the value of where the slider stops to use that as the value for the password length - done 
+
+// 10/03/2023
+// Task - Apply copy on click feature when the use clicks on the password generated text - done
+// Issue: A) When user clicks either of the password text. The user has to click twice for the copy to take effect. 
+//        Not sure why that is happening. 
+
+//        B) If the user copies either text back and forth an error is shown : Uncaught (in promise) DOMException: Clipboard write is not allowed.
+//        It still works but not sure what the work around is for this. 
+
+//        C) When the user runs the page at first then goes clicks the generate password first without moving the slider. 
+//           Not sure if this is a problem since the user hasn't provided input as to what password length they desire 
