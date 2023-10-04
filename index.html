@@ -13,20 +13,39 @@
             <h1><span class="text-light-green">random password</span></h1>
             <h4>Never use an insecure password again</h4>
         </div>
+        
 
         <div class="password-section">
             <button onclick="generatePw()" class="btn-generate-style btn">Generate passwords</button>
             <div class="range-container">
                 <input type="range" class="range" id="range-slider" min="7" max="64" > 
                 <input type="text" class="range-text" id="range-input" value="">
-              </div>
-            
+            </div>
+
+            <div class="toggle-container">
+                <span>Exclude symbols</span>
+                <label class="switch toggle-symbol">
+                    <input id="symbol-chkbox" type="checkbox" class="check-box">
+                    <span class="slider round"></span>
+                    
+                </label>
+                <span>Exclude numbers</span>
+                <label class="switch toggle-numbers">
+                    <input id="num-chkbox" type="checkbox" class="check-box">
+                    <span class="slider round"></span>
+                </label>
+                
+                
+            </div>
+
             <div class="border-bottom-line"></div>
             <div class="generated-passwords">
                 <button id="pw-a" class="pw-result-style text-drk-green" onclick="copyPwText()" >nfJjy!dDvR&ial</button>
                 <button id="pw-b" class="pw-result-style text-drk-green" onclick="copyPwText()" >egxWij@veiPUwKe</button>
             </div>
+            
         </div>
+        
         
 
     </main>
