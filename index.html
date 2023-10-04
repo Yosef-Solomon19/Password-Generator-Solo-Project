@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,14 @@
 </head>
 <body>
     <main>
-        <div class="text-section">
+        <header>   
             <h1>Generate a </h1>
             <h1><span class="text-light-green">random password</span></h1>
-            <h4>Never use an insecure password again</h4>
-        </div>
+            <h4>Never use an insecure password again</h4>        
+        </header>
         
-
-        <div class="password-section">
+        
+        <section>
             <button onclick="generatePw()" class="btn-generate-style btn">Generate passwords</button>
             <div class="range-container">
                 <input type="range" class="range" id="range-slider" min="7" max="64" > 
@@ -34,22 +33,18 @@
                     <input id="num-chkbox" type="checkbox" class="check-box">
                     <span class="slider round"></span>
                 </label>
-                
-                
             </div>
 
             <div class="border-bottom-line"></div>
             <div class="generated-passwords">
                 <button id="pw-a" class="pw-result-style text-drk-green" onclick="copyPwText()" >nfJjy!dDvR&ial</button>
                 <button id="pw-b" class="pw-result-style text-drk-green" onclick="copyPwText()" >egxWij@veiPUwKe</button>
-            </div>
-            
-        </div>
+            </div>            
+        </section>
         
         
 
-    </main>
-    
+    </main>    
     <script src="index.js"></script>
 </body>
 </html>
