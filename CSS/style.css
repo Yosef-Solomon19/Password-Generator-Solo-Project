@@ -16,7 +16,9 @@ body {
     color: #FAF9F6;
 }
 
-/* Utility class */
+/* =================
+    Utility class 
+   ================= */
 .text-drk-green {
     color: #10B981;
 }
@@ -47,7 +49,9 @@ h4 {
     font-size: 14px;
 }
 
-/** Styling **/
+/* =================
+    Styling 
+   ================= */
 main {
     /* border: 1px solid red;  */
     margin: 115px 52px;
@@ -126,8 +130,9 @@ button {
     background-color: #304158;
 }
 
-
-/** Password slider **/
+/* =================
+    Password slider 
+   ================= */
 /* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
     Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
@@ -141,7 +146,9 @@ button {
     text-align: center;
 }
 
-/**  Styling toggle box  **/
+/* =================
+    Styling toggle box 
+   ================= */
 /* Used the majority of the code in W3 Schools to make the toggle sliders.
  Didn't feel like I had to reinvent the wheel in this one. */
 
