@@ -41,7 +41,13 @@ h4 {
     color: #D5D4D8;
 }
 
-/* Styling */
+.toggle-container span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+/** Styling **/
 main {
     /* border: 1px solid red;  */
     margin: 115px 52px;
@@ -70,7 +76,6 @@ div h4 {
     margin-right: 30px;
 }
 
-
 button {
     cursor: pointer;
 }
@@ -78,8 +83,6 @@ button {
 /* .btn {
     cursor: pointer;
 } */
-
-
 
 .text-password-style {
     border: none;
@@ -93,7 +96,7 @@ button {
 
 .btn-generate-style {
     color: #f8f8f8;
-    margin-bottom: 34.5px;
+    margin-bottom: 15px;
     border: none;
     background-color: #10B981;
     padding: 9px 17px 9px 15px;
@@ -124,7 +127,7 @@ button {
 }
 
 
-/* Password slider */
+/** Password slider **/
 /* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
     Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
@@ -137,6 +140,89 @@ button {
     width: 20px;
     text-align: center;
 }
+
+/**  Styling toggle box  **/
+/* Used the majority of the code in W3 Schools to make the toggle sliders.
+ Didn't feel like I had to reinvent the wheel in this one. */
+
+.toggle-container {
+    /* border: 1px solid red; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-container span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.toggle-symbol {
+    margin-bottom: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #1F2937;
+    transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #10B981;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #10B981;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+    transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
 
 /* Question */
 /* For example if color A is green and color B is a different 
