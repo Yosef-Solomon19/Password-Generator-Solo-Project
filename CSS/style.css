@@ -1,15 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:wght@800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter&family=Karla:wght@800&display=swap');
 
-/* 
-    #1F2937 - background color for the body
-    #10B981 - background color for the generate password button
-    #273549 - background color for generated password 
-    #55F991 - color text for generated password 
-    white text for green button 
-
- */
-
 body {
     margin: 0; 
     background-color: #1F2937;
@@ -19,6 +10,7 @@ body {
 /* =================
     Utility class 
    ================= */
+/* border: 1px solid red;  */
 .text-drk-green {
     color: #10B981;
 }
@@ -27,7 +19,9 @@ body {
     color: #4ADF86;
 }
 
-/* Font */
+/* =================
+    Font 
+   ================= */
 body, section button {
     font-size: 20px;
 }
@@ -53,7 +47,6 @@ h4 {
     Styling 
    ================= */
 main {
-    /* border: 1px solid red;  */
     margin: 115px 52px;
 }
 
@@ -63,7 +56,6 @@ header h1 {
 
 header h4 {
     margin-top: 5px;
-    /* color: rgb(224, 207, 207); */
 }
 
 header{
@@ -78,7 +70,6 @@ header{
 }
 
 .generated-passwords button {
-    /* border: 1px solid red; */
     margin-right: 30px;
 }
 
@@ -86,17 +77,12 @@ button {
     cursor: pointer;
 }
 
-/* .btn {
-    cursor: pointer;
-} */
-
 .text-password-style {
     border: none;
     background-color: #273549;
 }
 
 section {
-    /* border: 1px solid red; */
     margin-top: 50px;    
 }
 
@@ -135,8 +121,10 @@ section {
 /* =================
     Password slider 
    ================= */
-/* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
-    Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
+/* 
+    Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
+    Had to read and take snippet of code on how to create range slider with bubbles showing the current value
+ */
 
 .range-container {
     display: inline; 
@@ -152,7 +140,7 @@ section {
     Styling toggle box 
    ================= */
 /* Used the majority of the code in W3 Schools to make the toggle sliders.
- Didn't feel like I had to reinvent the wheel in this one. */
+  Didn't feel like I had to re-invent the wheel in this one. */
 
 .toggle-container {
     /* border: 1px solid red; */
@@ -247,4 +235,11 @@ section {
                   2 - The generated password text seem to fight eachother for space. One looks cramped while the other 
                         is stretched out 
 
+ */
+
+/* 10/05/2023
+  Task: Working on toggle button in JS
+  Issues: 
+  What I've tried:
+ 
  */

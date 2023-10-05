@@ -71,7 +71,7 @@ range.addEventListener("input", () => {
   
 
 
-// *** Copy on click ***/
+// *** Copy on click ***//
 function copyPwText() {
   passwordAEl.addEventListener('click', () =>{
     navigator.clipboard.writeText(passwordAEl.textContent)
@@ -94,6 +94,10 @@ function copyPwText() {
   // alert("Copied the text: " + copyText.value); 
 
 }
+
+// *** Generate password based on which toggle is on ***//
+
+
 
 
 
@@ -118,3 +122,7 @@ function copyPwText() {
 
 //        C) When the user runs the page at first then goes clicks the generate password first without moving the slider. 
 //           Not sure if this is a problem since the user hasn't provided input as to what password length they desire 
+
+// 10/03/2023
+// Task - Toggle symbols and numbers on and off 
+// Issue: 
