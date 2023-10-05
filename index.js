@@ -10,7 +10,7 @@ let passwordBEl = document.querySelector("#pw-b")
 console.log(passwordAEl)
 
 
-
+// *** Generate Random Password  ***//
 function generatePw() {
     console.log(rangeVal)   
     passwordAEl.textContent=""
@@ -22,6 +22,8 @@ function generatePw() {
 }
 
 function getRandomPw(pwLength, pwText) {
+  // if toggle is true 
+  // use an updated array to randomly select the remaining items in it
     for(let i=0; i < pwLength; i++) {
         let randomNumber = Math.floor(Math.random() * 91);
         pwText.textContent += characters[randomNumber];
@@ -29,20 +31,18 @@ function getRandomPw(pwLength, pwText) {
 }
 
 
-// /* Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
+//***  Adapted from https://css-tricks.com/value-bubbles-for-range-inputs ***//
 // Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
 const range = document.querySelector(".range")
 const inputText = document.querySelector(".range-text")
 let rangeVal;
-
 // function getFinalval(val) {
 //     // const rangeVal = Number(val)
 //     // generatePw(rangeVal)
     
 
 // }
-
 range.addEventListener("input", () => {
     updateInputText()
     });
@@ -55,7 +55,6 @@ range.addEventListener("input", () => {
 //     });
 
 //   }
-
   function updateInputText() {
     // console.log(val)
     rangeVal = range.value;
@@ -71,32 +70,43 @@ range.addEventListener("input", () => {
   
 
 
-// *** Copy on click ***//
-function copyPwText() {
-  passwordAEl.addEventListener('click', () =>{
-    navigator.clipboard.writeText(passwordAEl.textContent)
-    console.log(passwordAEl.textContent)
-  })
+// *** Copy on click *** //
+passwordAEl.addEventListener('click', () =>{
+  navigator.clipboard.writeText(passwordAEl.textContent)
+  console.log(passwordAEl.textContent)
+})
 
-  passwordBEl.addEventListener('click', () =>{
-    navigator.clipboard.writeText(passwordBEl.textContent)
-    console.log(passwordBEl.textContent)
-  })
-  
+passwordBEl.addEventListener('click', () =>{
+  navigator.clipboard.writeText(passwordBEl.textContent)
+  console.log(passwordBEl.textContent)
+})
 
-
-  // passwordBEl.addEventListener("copy", () => {
-  //   navigator.clipboard.writeText()
-  // })
-
-  // console.log(passwordBEl.value)
-  // navigator.clipboard.writeText(passwordBEl.value) 
-  // alert("Copied the text: " + copyText.value); 
+// *** Generate password based on which toggle is on *** //
+let isNumToggled = false;
+let isSymbolToggled = false; 
+const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
+const numChkboxEl = document.querySelector("#num-chkbox");
+function excludeNumChar() {
+  if(isNumToggled === true) {
+    isNumToggled = false;
+    console.log(isNumToggled)
+  } else {
+    isNumToggled = true;
+    console.log(isNumToggled)
+  }
 
 }
 
-// *** Generate password based on which toggle is on ***//
+function excludeSymbolChar() {
+  if(isSymbolToggled === true) {
+    isSymbolToggled = false;
+    console.log(isSymbolToggled)
+  } else {
+    isSymbolToggled = true;
+    console.log(isSymbolToggled)
+  }
 
+}
 
 
 

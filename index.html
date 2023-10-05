@@ -30,15 +30,16 @@
                 </label>
                 <span>Exclude numbers</span>
                 <label class="switch toggle-numbers">
-                    <input id="num-chkbox" type="checkbox" class="check-box">
+                    <input id="num-chkbox" onclick="excludeNumChar()" type="checkbox" class="check-box">
                     <span class="slider round"></span>
                 </label>
             </div>
 
             <div class="border-bottom-line"></div>
             <div class="generated-passwords">
-                <button id="pw-a" class="pw-result-style text-drk-green" onclick="copyPwText()" >nfJjy!dDvR&ial</button>
-                <button id="pw-b" class="pw-result-style text-drk-green" onclick="copyPwText()" >egxWij@veiPUwKe</button>
+                <button id="pw-a" class="pw-result-style text-drk-green"  >nfJjy!dDvR&ial</button> 
+                <button id="pw-b" class="pw-result-style text-drk-green"  >egxWij@veiPUwKe</button>
+                <!-- onclick="copyPwText()" -->
             </div>            
         </section>
 
