@@ -4,6 +4,22 @@ const characters = ["A","B","C","D","E","F","G","H",
  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
  "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
+console.log(characters.length)
+// console.log(characters.slice(52, 62))
+// console.log(characters.slice(0, 52))
+// console.log(characters.slice(62))
+console.log(characters.slice(0, 62))
+
+let x = characters.slice(0, 52);
+let y = characters.slice(62);
+let t = x.concat(y)
+console.log(t)
+
+// let x = Math.floor(Math.random() * 39)
+// let y = characters.slice(52);
+// console.log(characters.slice(52))
+// console.log(y[x])
+
 
 let passwordAEl = document.querySelector("#pw-a")
 let passwordBEl = document.querySelector("#pw-b")
@@ -23,11 +39,51 @@ function generatePw() {
 
 function getRandomPw(pwLength, pwText) {
   // if toggle is true 
-  // use an updated array to randomly select the remaining items in it
+  if (isNumToggled === true && isSymbolToggled === true) {
+    let remainingChar = characters.slice(0, 52); 
     for(let i=0; i < pwLength; i++) {
-        let randomNumber = Math.floor(Math.random() * 91);
-        pwText.textContent += characters[randomNumber];
+      let randomNumber = Math.floor(Math.random() * 91);
+      pwText.textContent += remainingChar[randomNumber];
+      }
+
+  } else if (isNumToggled === true && isSymbolToggled === false) {
+    getRandomPwNoNum()
+
+  } else if (isNumToggled === false && isSymbolToggled === true) {
+    getRandomPwNoSymbols()
+
+  } else {
+    for(let i=0; i < pwLength; i++) {
+      let randomNumber = Math.floor(Math.random() * 91);
+      pwText.textContent += characters[randomNumber];
     }
+
+  }
+  // use an updated array to randomly select the remaining items in it
+    // for(let i=0; i < pwLength; i++) {
+    //     let randomNumber = Math.floor(Math.random() * 91);
+    //     pwText.textContent += characters[randomNumber];
+    // }
+}
+
+function getRandomPwNoNum(){
+    let remainingLetters = characters.slice(0, 52);
+    let remainingSymbols = characters.slice(62);
+    let newCharacters =  remainingLetters.concat(remainingSymbols)
+    for(let i=0; i < pwLength; i++) {
+      let randomNumber = Math.floor(Math.random() * newCharacters.length);
+      pwText.textContent += newCharacters[randomNumber];
+      }
+
+}
+
+function getRandomPwNoSymbols() {
+  let newCharacters = characters.slice(0, 62); 
+  for(let i=0; i < pwLength; i++) {
+    let randomNumber = Math.floor(Math.random() * newCharacters.length);
+    pwText.textContent += newCharacters[randomNumber];
+    }
+
 }
 
 
@@ -86,6 +142,7 @@ let isNumToggled = false;
 let isSymbolToggled = false; 
 const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
 const numChkboxEl = document.querySelector("#num-chkbox");
+
 function excludeNumChar() {
   if(isNumToggled === true) {
     isNumToggled = false;
@@ -94,7 +151,6 @@ function excludeNumChar() {
     isNumToggled = true;
     console.log(isNumToggled)
   }
-
 }
 
 function excludeSymbolChar() {
