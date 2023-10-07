@@ -4,16 +4,20 @@ const characters = ["A","B","C","D","E","F","G","H",
  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
  "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-console.log(characters.length)
+// console.log(characters.length)
 // console.log(characters.slice(52, 62))
 // console.log(characters.slice(0, 52))
 // console.log(characters.slice(62))
-console.log(characters.slice(0, 62))
+// console.log(characters.slice(0, 62))
 
-let x = characters.slice(0, 52);
-let y = characters.slice(62);
-let t = x.concat(y)
-console.log(t)
+let numChars = characters.slice(52, 62)
+let alphabetChars= characters.slice(0, 52);
+let symbolChars = characters.slice(62);
+
+// What would be a better way to name this ?
+let alphabetNumChars = alphabetChars.concat(numChars);
+let symbolAndAlphabetChars = alphabetChars.concat(symbolChars);
+console.log(alphabetNumChars)
 
 // let x = Math.floor(Math.random() * 39)
 // let y = characters.slice(52);
@@ -27,6 +31,11 @@ console.log(passwordAEl)
 
 
 // *** Generate Random Password  ***//
+let generatePwEl = document.querySelector("#generate-pw"); 
+generatePwEl.addEventListener("click", () => {
+  generatePw()
+})
+
 function generatePw() {
     console.log(rangeVal)   
     passwordAEl.textContent=""
@@ -40,21 +49,25 @@ function generatePw() {
 function getRandomPw(pwLength, pwText) {
   // if toggle is true 
   if (isNumToggled === true && isSymbolToggled === true) {
-    let remainingChar = characters.slice(0, 52); 
     for(let i=0; i < pwLength; i++) {
-      let randomNumber = Math.floor(Math.random() * 91);
-      pwText.textContent += remainingChar[randomNumber];
+      console.log(`Num & Symbols are true`)
+      let randomNumber = Math.floor(Math.random() * alphabetChars.length);
+      pwText.textContent += alphabetChars[randomNumber];
       }
 
   } else if (isNumToggled === true && isSymbolToggled === false) {
-    getRandomPwNoNum()
+    getRandomPwNoNum(pwLength, pwText)
+    console.log(`Num is true`)
 
   } else if (isNumToggled === false && isSymbolToggled === true) {
-    getRandomPwNoSymbols()
+    getRandomPwNoSymbols(pwLength, pwText)
+    console.log(`Symbol is true`)
+
 
   } else {
+    console.log(`Both toggles are off`)
     for(let i=0; i < pwLength; i++) {
-      let randomNumber = Math.floor(Math.random() * 91);
+      let randomNumber = Math.floor(Math.random() * characters.length);
       pwText.textContent += characters[randomNumber];
     }
 
@@ -66,22 +79,18 @@ function getRandomPw(pwLength, pwText) {
     // }
 }
 
-function getRandomPwNoNum(){
-    let remainingLetters = characters.slice(0, 52);
-    let remainingSymbols = characters.slice(62);
-    let newCharacters =  remainingLetters.concat(remainingSymbols)
+function getRandomPwNoNum(pwLength, pwText){
     for(let i=0; i < pwLength; i++) {
-      let randomNumber = Math.floor(Math.random() * newCharacters.length);
-      pwText.textContent += newCharacters[randomNumber];
+      let randomNumber = Math.floor(Math.random() * symbolAndAlphabetChars.length);
+      pwText.textContent += symbolAndAlphabetChars[randomNumber];
       }
 
 }
 
-function getRandomPwNoSymbols() {
-  let newCharacters = characters.slice(0, 62); 
+function getRandomPwNoSymbols(pwLength, pwText) {
   for(let i=0; i < pwLength; i++) {
-    let randomNumber = Math.floor(Math.random() * newCharacters.length);
-    pwText.textContent += newCharacters[randomNumber];
+    let randomNumber = Math.floor(Math.random() * alphabetNumChars.length);
+    pwText.textContent += alphabetNumChars[randomNumber];
     }
 
 }
@@ -90,8 +99,8 @@ function getRandomPwNoSymbols() {
 //***  Adapted from https://css-tricks.com/value-bubbles-for-range-inputs ***//
 // Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
-const range = document.querySelector(".range")
-const inputText = document.querySelector(".range-text")
+const rangeEl = document.querySelector("#range-slider")
+const rangeInputEl = document.querySelector("#range-input")
 let rangeVal;
 // function getFinalval(val) {
 //     // const rangeVal = Number(val)
@@ -99,7 +108,7 @@ let rangeVal;
     
 
 // }
-range.addEventListener("input", () => {
+rangeEl.addEventListener("input", () => {
     updateInputText()
     });
 
@@ -113,10 +122,10 @@ range.addEventListener("input", () => {
 //   }
   function updateInputText() {
     // console.log(val)
-    rangeVal = range.value;
+    rangeVal = rangeEl.value;
     
     // const val = range.value;
-    inputText.value = rangeVal = range.value;
+    rangeInputEl.value = rangeVal;
     console.log(rangeVal)
 
     // console.log(range)
@@ -143,23 +152,31 @@ let isSymbolToggled = false;
 const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
 const numChkboxEl = document.querySelector("#num-chkbox");
 
-function excludeNumChar() {
+symbolChkBoxEl.addEventListener("change", () => {
+  excludeSymbol();
+})
+
+numChkboxEl.addEventListener("change", () => {
+  excludeNum();
+})
+
+function excludeNum() {
   if(isNumToggled === true) {
     isNumToggled = false;
-    console.log(isNumToggled)
+    console.log(`Number is toggled ${isNumToggled}`)
   } else {
     isNumToggled = true;
-    console.log(isNumToggled)
+    console.log(`Number is toggled ${isNumToggled}`)
   }
 }
 
-function excludeSymbolChar() {
+function excludeSymbol() {
   if(isSymbolToggled === true) {
     isSymbolToggled = false;
-    console.log(isSymbolToggled)
+    console.log(`Symbol is toggled ${isSymbolToggled}`)
   } else {
     isSymbolToggled = true;
-    console.log(isSymbolToggled)
+    console.log(`Symbol is toggled ${isSymbolToggled}`)
   }
 
 }
@@ -192,3 +209,8 @@ function excludeSymbolChar() {
 // 10/03/2023
 // Task - Toggle symbols and numbers on and off 
 // Issue: 
+//        Doesn't store the boolean values after being refreshed. 
+//        Is it better to have a event listener with a function inside it ? 
+//          OR 
+//        Include the code from the function in the event listener instead ? 
+//        What would be the Dryer way for handling for let randomNumber ?
