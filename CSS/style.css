@@ -118,9 +118,9 @@ section {
     background-color: #304158;
 }
 
-/* =================
-    Password slider 
-   ================= */
+/* =======================
+ Password Character length slider 
+   =========================*/
 /* 
     Adapted from https://css-tricks.com/value-bubbles-for-range-inputs/
     Had to read and take snippet of code on how to create range slider with bubbles showing the current value
@@ -136,11 +136,11 @@ section {
     text-align: center;
 }
 
-/* =================
+/* ===================
     Styling toggle box 
-   ================= */
+   =================== */
 /* Used the majority of the code in W3 Schools to make the toggle sliders.
-  Didn't feel like I had to re-invent the wheel in this one. */
+  Didn't feel like I had to re-invent the wheel on this one. */
 
 .toggle-container {
     /* border: 1px solid red; */
