@@ -15,7 +15,7 @@
         
         
         <section>
-            <button onclick="generatePw()" class="btn-generate-style btn">Generate passwords</button>
+            <button id="generate-pw" class="btn-generate-style btn">Generate passwords</button> <!-- onclick="generatePw()"-->
             <div class="range-container">
                 <input type="range" class="range" id="range-slider" min="7" max="64" > 
                 <input type="text" class="range-text" id="range-input" value="">
@@ -30,7 +30,7 @@
                 </label>
                 <span>Exclude numbers</span>
                 <label class="switch toggle-numbers">
-                    <input id="num-chkbox" onclick="excludeNumChar()" type="checkbox" class="check-box">
+                    <input id="num-chkbox" type="checkbox" class="check-box"> <!--onclick="excludeNum()"-->
                     <span class="slider round"></span>
                 </label>
             </div>
