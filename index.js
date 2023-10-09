@@ -4,11 +4,6 @@ const characters = ["A","B","C","D","E","F","G","H",
  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
  "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-// console.log(characters.length)
-// console.log(characters.slice(52, 62))
-// console.log(characters.slice(0, 52))
-// console.log(characters.slice(62))
-// console.log(characters.slice(0, 62))
 
 let numChars = characters.slice(52, 62)
 let alphabetChars= characters.slice(0, 52);
@@ -18,12 +13,6 @@ let symbolChars = characters.slice(62);
 let alphabetNumChars = alphabetChars.concat(numChars);
 let symbolAndAlphabetChars = alphabetChars.concat(symbolChars);
 console.log(alphabetNumChars)
-
-// let x = Math.floor(Math.random() * 39)
-// let y = characters.slice(52);
-// console.log(characters.slice(52))
-// console.log(y[x])
-
 
 let passwordAEl = document.querySelector("#pw-a")
 let passwordBEl = document.querySelector("#pw-b")
@@ -72,11 +61,6 @@ function getRandomPw(pwLength, pwText) {
     }
 
   }
-  // use an updated array to randomly select the remaining items in it
-    // for(let i=0; i < pwLength; i++) {
-    //     let randomNumber = Math.floor(Math.random() * 91);
-    //     pwText.textContent += characters[randomNumber];
-    // }
 }
 
 function getRandomPwNoNum(pwLength, pwText){
@@ -102,24 +86,11 @@ function getRandomPwNoSymbols(pwLength, pwText) {
 const rangeEl = document.querySelector("#range-slider")
 const rangeInputEl = document.querySelector("#range-input")
 let rangeVal;
-// function getFinalval(val) {
-//     // const rangeVal = Number(val)
-//     // generatePw(rangeVal)
-    
-
-// }
+  
 rangeEl.addEventListener("input", () => {
     updateInputText()
     });
 
-// function getRangeNum() {
-//     // let convertToNum = parseInt(val);
-
-//     range.addEventListener("input", () => {
-//         updateInputText()
-//     });
-
-//   }
   function updateInputText() {
     // console.log(val)
     rangeVal = rangeEl.value;
@@ -127,12 +98,7 @@ rangeEl.addEventListener("input", () => {
     // const val = range.value;
     rangeInputEl.value = rangeVal;
     console.log(rangeVal)
-
-    // console.log(range)
-
-    // console.log(inputText)
-  }
-  
+  } 
 
 
 // *** Copy on click *** //
@@ -146,7 +112,7 @@ passwordBEl.addEventListener('click', () =>{
   console.log(passwordBEl.textContent)
 })
 
-// *** Generate password based on which toggle is on *** //
+// *** Change the status/value of the boolean variable based on which toggle is on *** //
 let isNumToggled = false;
 let isSymbolToggled = false; 
 const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
