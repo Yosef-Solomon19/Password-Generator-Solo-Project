@@ -85,21 +85,20 @@ function getRandomPwNoSymbols(pwLength, pwText) {
 
 const rangeEl = document.querySelector("#range-slider")
 const rangeInputEl = document.querySelector("#range-input")
-let rangeVal;
+let rangeVal = rangeInputEl.textContent;
   
 rangeEl.addEventListener("input", () => {
-    updateInputText()
-    });
+  updateInputText() 
+});
 
-  function updateInputText() {
-    // console.log(val)
-    rangeVal = rangeEl.value;
-    
-    // const val = range.value;
-    rangeInputEl.value = rangeVal;
-    console.log(rangeVal)
-  } 
-
+function updateInputText() {
+  // console.log(val)
+  rangeVal = rangeEl.value;
+  
+  // const val = range.value;
+  rangeInputEl.textContent = rangeVal;
+  console.log(rangeVal)
+}
 
 // *** Copy on click *** //
 passwordAEl.addEventListener('click', () =>{
