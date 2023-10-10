@@ -126,23 +126,11 @@ numChkboxEl.addEventListener("change", () => {
 })
 
 function excludeNum() {
-  if(isNumToggled === true) {
-    isNumToggled = false;
-    console.log(`Number is toggled ${isNumToggled}`)
-  } else {
-    isNumToggled = true;
-    console.log(`Number is toggled ${isNumToggled}`)
-  }
+  isNumToggled = !isNumToggled;
 }
 
 function excludeSymbol() {
-  if(isSymbolToggled === true) {
-    isSymbolToggled = false;
-    console.log(`Symbol is toggled ${isSymbolToggled}`)
-  } else {
-    isSymbolToggled = true;
-    console.log(`Symbol is toggled ${isSymbolToggled}`)
-  }
+  isSymbolToggled = !isSymbolToggled;
 
 }
 
