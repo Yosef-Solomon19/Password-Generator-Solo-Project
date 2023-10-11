@@ -12,11 +12,11 @@ let symbolChars = characters.slice(62);
 // What would be a better way to name this ?
 let alphabetNumChars = alphabetChars.concat(numChars);
 let symbolAndAlphabetChars = alphabetChars.concat(symbolChars);
-console.log(alphabetNumChars)
+
 
 let passwordAEl = document.querySelector("#pw-a")
 let passwordBEl = document.querySelector("#pw-b")
-console.log(passwordAEl)
+
 
 
 // *** Generate Random Password  ***//
@@ -25,8 +25,7 @@ generatePwEl.addEventListener("click", () => {
   generatePw()
 })
 
-function generatePw() {
-    console.log(rangeVal)   
+function generatePw() {  
     passwordAEl.textContent=""
     passwordBEl.textContent=""
 
@@ -42,14 +41,11 @@ function getRandomPw(pwLength, pwText) {
 
   } else if (isNumToggled === true && isSymbolToggled === false) {
     generatePassword(pwLength, pwText, symbolAndAlphabetChars)
-    console.log(`Num is true`)
 
   } else if (isNumToggled === false && isSymbolToggled === true) {
     generatePassword(pwLength, pwText, alphabetNumChars)
-    console.log(`Symbol is true`)
 
   } else {
-    console.log(`Both toggles are off`)
     generatePassword(pwLength, pwText, characters)
 
   }
@@ -76,23 +72,19 @@ rangeEl.addEventListener("input", () => {
 });
 
 function updateInputText() {
-  // console.log(val)
   rangeVal = rangeEl.value;
   
   // const val = range.value;
   rangeInputEl.textContent = rangeVal;
-  console.log(rangeVal)
 }
 
 // *** Copy on click *** //
 passwordAEl.addEventListener('click', () =>{
   navigator.clipboard.writeText(passwordAEl.textContent)
-  console.log(passwordAEl.textContent)
 })
 
 passwordBEl.addEventListener('click', () =>{
   navigator.clipboard.writeText(passwordBEl.textContent)
-  console.log(passwordBEl.textContent)
 })
 
 // *** Change the status/value of the boolean variable based on which toggle is on *** //
@@ -115,12 +107,7 @@ function excludeNum() {
 
 function excludeSymbol() {
   isSymbolToggled = !isSymbolToggled;
-
 }
-
-
-
-
 
 
 // 27/09/2023
