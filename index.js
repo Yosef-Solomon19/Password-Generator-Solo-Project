@@ -5,6 +5,15 @@ const characters = ["A","B","C","D","E","F","G","H",
  "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
+const rangeEl = document.querySelector("#range-slider")
+const rangeInputEl = document.querySelector("#range-input")
+let rangeVal = rangeInputEl.textContent;
+
+let isNumToggled = false;
+let isSymbolToggled = false; 
+const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
+const numChkboxEl = document.querySelector("#num-chkbox");
+
 let numChars = characters.slice(52, 62)
 let alphabetChars= characters.slice(0, 52);
 let symbolChars = characters.slice(62);
@@ -13,11 +22,8 @@ let symbolChars = characters.slice(62);
 let alphabetNumChars = alphabetChars.concat(numChars);
 let symbolAndAlphabetChars = alphabetChars.concat(symbolChars);
 
-
 let passwordAEl = document.querySelector("#pw-a")
 let passwordBEl = document.querySelector("#pw-b")
-
-
 
 // *** Generate Random Password  ***//
 let generatePwEl = document.querySelector("#generate-pw"); 
@@ -63,10 +69,6 @@ function generatePassword(pwLength, pwText, characters){
 //***  Adapted from https://css-tricks.com/value-bubbles-for-range-inputs ***//
 // Had to read and take snippet of code on how to create range slider with bubbles showing the current value */
 
-const rangeEl = document.querySelector("#range-slider")
-const rangeInputEl = document.querySelector("#range-input")
-let rangeVal = rangeInputEl.textContent;
-  
 rangeEl.addEventListener("input", () => {
   updateInputText() 
 });
@@ -88,10 +90,6 @@ passwordBEl.addEventListener('click', () =>{
 })
 
 // *** Change the status/value of the boolean variable based on which toggle is on *** //
-let isNumToggled = false;
-let isSymbolToggled = false; 
-const symbolChkBoxEl = document.querySelector("#symbol-chkbox");
-const numChkboxEl = document.querySelector("#num-chkbox");
 
 symbolChkBoxEl.addEventListener("change", () => {
   excludeSymbol();
