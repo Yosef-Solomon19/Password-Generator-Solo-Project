@@ -38,45 +38,29 @@ function generatePw() {
 function getRandomPw(pwLength, pwText) {
   // if toggle is true 
   if (isNumToggled === true && isSymbolToggled === true) {
-    for(let i=0; i < pwLength; i++) {
-      console.log(`Num & Symbols are true`)
-      let randomNumber = Math.floor(Math.random() * alphabetChars.length);
-      pwText.textContent += alphabetChars[randomNumber];
-      }
+    generatePassword(pwLength, pwText, alphabetChars)
 
   } else if (isNumToggled === true && isSymbolToggled === false) {
-    getRandomPwNoNum(pwLength, pwText)
+    generatePassword(pwLength, pwText, symbolAndAlphabetChars)
     console.log(`Num is true`)
 
   } else if (isNumToggled === false && isSymbolToggled === true) {
-    getRandomPwNoSymbols(pwLength, pwText)
+    generatePassword(pwLength, pwText, alphabetNumChars)
     console.log(`Symbol is true`)
-
 
   } else {
     console.log(`Both toggles are off`)
-    for(let i=0; i < pwLength; i++) {
-      let randomNumber = Math.floor(Math.random() * characters.length);
-      pwText.textContent += characters[randomNumber];
-    }
+    generatePassword(pwLength, pwText, characters)
 
   }
 }
 
-function getRandomPwNoNum(pwLength, pwText){
-    for(let i=0; i < pwLength; i++) {
-      let randomNumber = Math.floor(Math.random() * symbolAndAlphabetChars.length);
-      pwText.textContent += symbolAndAlphabetChars[randomNumber];
-      }
-
-}
-
-function getRandomPwNoSymbols(pwLength, pwText) {
+// Creating a generic function
+function generatePassword(pwLength, pwText, characters){
   for(let i=0; i < pwLength; i++) {
-    let randomNumber = Math.floor(Math.random() * alphabetNumChars.length);
-    pwText.textContent += alphabetNumChars[randomNumber];
+    let randomNumber = Math.floor(Math.random() * characters.length);
+    pwText.textContent += characters[randomNumber];
     }
-
 }
 
 
